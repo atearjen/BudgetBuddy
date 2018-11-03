@@ -1,0 +1,219 @@
+*
+{
+text-align: center !important;
+/* margin: auto !important; */
+}
+.first {
+  width: 300px !important;
+  border: 200px !important;
+  padding: 10px !important;
+  margin:  20px !important;
+}
+
+html {
+  background: grey;
+  position: center;
+}
+
+/* box background */
+
+/* position: absolute;
+width: 408px;
+height: 422px;
+
+background: #CE5F5F; */
+
+
+
+h1 {
+  position: absolute;
+  width: 184px;
+  height: 32px;
+  font-family: Signika;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+
+  text-align: center;
+
+  color: #000000;
+}
+#circle {
+      width: 50px;
+      height: 50px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      border-radius: 100px;
+      background: green;
+      padding: 100px;
+      margin: 0;
+    }
+
+
+/* .full {
+  margin-left: auto;
+  margin-right: auto;
+  width: 205px;
+  height: 38px;
+  padding: 10px;
+  margin: 50px;
+  background: #F8F2F2;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Signika;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.43);
+} */
+
+p {
+  font-family: Signika;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 50px
+}
+
+#budget,#full {
+  position: center;
+  width: 205px;
+  height: 38px;
+  padding: 10px;
+  margin: 10px;
+  background: #F8F2F2;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: Signika;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 18px;
+text-align: center;
+
+color: rgba(0, 0, 0, 0.43);
+}
+
+
+
+.date {
+  width: 57px;
+  height: 28px;
+  position: center;
+  margin: 10px;
+  font-family: Signika;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 18px;
+  text-align: center;
+
+  color: rgba(0, 0, 0, 0.43);
+}
+
+.how-long {
+  position: center;
+  width: 205px;
+  height: 28px;
+  padding: 10px;
+  margin: 10px;
+font-family: Signika;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 18px;
+text-align: center;
+
+color: rgba(0, 0, 0, 0.43);
+
+}
+
+button {
+  position: center;
+  background: green;
+  width: 180px;
+  padding: 4px 0;
+
+  position: absolute;
+
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 3px;
+
+    font-family: Signika;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    user-select: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.4;
+    bottom: -30px;
+  }
+}
+/* position: absolute;
+
+
+
+
+/* Day */
+/*
+position: absolute;
+width: 57px;
+height: 28px;
+
+font-family: Signika;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 18px;
+text-align: center;
+
+color: rgba(0, 0, 0, 0.43); */
+
+
+
+/* Year */
+/*
+position: absolute;
+width: 57px;
+height: 28px;
+
+font-family: Signika;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 18px;
+text-align: center;
+
+color: rgba(0, 0, 0, 0.43); */
+
+
+
+/* When can we help you start budgeting? */
+/*
+position: absolute;
+width: 264px;
+height: 22px;
+
+font-family: Signika;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 14px;
+text-align: center;
+
+color: #000000; */

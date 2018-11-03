@@ -2,6 +2,21 @@ from bmonth import bmonth
 from flask import Flask, render_template, request
 from flask_cors import CORS
 
+app = Flask(__name__)
+CORS(app)
+
+test= bmonth()
+@app.route('/save', methods=['POST'])
+def formData():
+    test.test()
+    data= request.form
+    print(data['fullname'])
+
+    return '',200
+
+
+#from bmonth import bmonth
+
 
 #test = bmonth()
 
@@ -18,5 +33,3 @@ from flask_cors import CORS
 #print test.entertainment(.15)
 
 #####################################################################################
-app = Flask(__name__)
-CORS(app)
