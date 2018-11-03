@@ -11,4 +11,6 @@ test = bmonth()
 
 #test.saveVar(1,1,2018,2,1,2018,1500)
 #print(test.getDays())
-print(test.getBudget())
+#print(test.getBudget())
+
+print test.entertainment(.15)

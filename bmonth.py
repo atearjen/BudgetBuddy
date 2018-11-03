@@ -37,7 +37,7 @@ class bmonth():
 		return days
 
 
-	def getBudgetTotal(self):
+	def getBudgetDay(self):
 		data=[]
 
 		with open("data.csv") as csvfile:
@@ -57,3 +57,50 @@ class bmonth():
 
 
 		return (float(budget)/self.getDays())
+
+
+	def getBudgetTotal(self):
+		data=[]
+
+		with open("data.csv") as csvfile:
+   			reader = csv.reader(csvfile, quoting=csv.QUOTE_NONNUMERIC)
+			for row in reader:
+				data.append(row)
+
+		data2=data[0]
+
+		Smonth=int(data2[0])
+		Sday=int(data2[1])
+		Syear=int(data2[2])
+		Emonth=int(data2[3])
+		Eday=int(data2[4])
+		Eyear=int(data2[5])
+		budget=data2[6]
+
+
+		return (float(budget))
+
+
+#####Categories
+
+	def entertainment(self, percent):
+		eBudg=self.getBudgetTotal()*percent
+
+		return eBudg
+
+
+	def food(self, percent):
+		fBudg=self.getBudgetTotal()*percent
+
+		return fBudg
+
+	def rentUtil(self, percent):
+		rBudg=self.getBudgetTotal()*percent
+
+		return rBudg
+
+
+
+
+
+
