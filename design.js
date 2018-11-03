@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var API_BASE_URL = 'http://localhost:5005'
 
 function sendGet(route, cb) {
@@ -24,6 +25,8 @@ function sendPost(route, d, cb) {
 }
 
 
+=======
+>>>>>>> origin/master
 var $form = $("#data");
 
 var $button = $('a');
@@ -34,6 +37,7 @@ $form.on('submit', function(event) {
   // TweenMax.to($button, duration, {scaleY: 1.6, ease: Expo.easeOut});
   // TweenMax.to($button, duration, {scaleX: 1.2, scaleY: 1, ease: Back.easeOut, easeParams: [3], delay: delay});
   // TweenMax.to($button, duration * 1.25, {scaleX: 1, scaleY: 1, ease: Back.easeOut, easeParams: [6], delay: delay * 3 });
+<<<<<<< HEAD
   console.log($form.serializeArray());
   sendPost("/save",$form.serializeArray(),function () {
     console.log("got here");
@@ -41,6 +45,15 @@ $form.on('submit', function(event) {
   // $.get("/item",function (data) {
   //   console.log(data);
   // })
+=======
+  //console.log($form.serializeArray());
+  $.post("/save",$form.serializeArray(),function () {
+    console.log("got here");
+  });
+  $.get("/item",function (data) {
+    console.log(data);
+  })
+>>>>>>> origin/master
 });
 
 
