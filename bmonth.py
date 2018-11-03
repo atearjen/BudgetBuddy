@@ -6,6 +6,7 @@ class bmonth():
 	def test(self):
 		print('we made it')
 
+
 	def saveVar(self, Smonth, Sday, Syear, Emonth, Eday, Eyear, budget, fullName, entertain, food, rentUtil):
 		with open('data.csv', mode='w') as data:
 			data_writer= csv.writer(data, delimiter=",",quotechar='"',quoting=csv.QUOTE_MINIMAL)			
