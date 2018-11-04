@@ -7,10 +7,10 @@ class bmonth():
 		print('we made it')
 
 
-	def saveVar(self, Smonth, Sday, Syear, Emonth, Eday, Eyear, budget, fullName, entertain, food, rentUtil):
+	def saveVar(self, Smonth, Sday, Syear, Emonth, Eday, Eyear, budget, fullName):
 		with open('data.csv', mode='w') as data:
 			data_writer= csv.writer(data, delimiter=",",quotechar='"',quoting=csv.QUOTE_MINIMAL)			
-			csvRow=[Smonth,Sday,Syear,Emonth,Eday,Eyear,budget,fullName,entertain,food,rentUtil]
+			csvRow=[Smonth,Sday,Syear,Emonth,Eday,Eyear,budget,fullName]
 			data_writer.writerow(csvRow)
 
 	def getDays(self):

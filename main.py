@@ -8,11 +8,20 @@ CORS(app)
 test= bmonth()
 @app.route('/save', methods=['POST'])
 def formData():
-    test.test()
     data= request.form
-    print(data['fullname'])
+    fullname=data['fullname']
+    budget=data['amount-budget']
+    sDate=data['date']
+    eDate=data['duration']
+
+    sDate=sDate.split('-')
+    eDate=eDate.split('-')
+
+    test.saveVar(int(sDate[1]),int(sDate[2]),int(sDate[0]),int(eDate[1]),int(eDate[2]),int(eDate[0]),int(budget),fullname)
 
     return '',200
+
+
 
 
 #from bmonth import bmonth

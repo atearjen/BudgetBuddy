@@ -1,5 +1,5 @@
 
-var API_BASE_URL = 'http://localhost:5005'
+var API_BASE_URL = 'https://localhost:5005'
 
 function sendGet(route, cb) {
   var url = API_BASE_URL + route;
