@@ -79,8 +79,7 @@ class bmonth():
 		Eyear=int(data2[5])
 		budget=data2[6]
 
-
-		return (float(budget))
+		return float(budget)
 
 #########transactions------------------------------------------------------
 	def sort(self):

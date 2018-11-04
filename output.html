@@ -12,9 +12,10 @@
 </head>
 
 <body>
-  <div id="circle">
+  <!-- <div id="circle">
     <h1> BudgetBud </h1>
-  </div>
+  </div> -->
+  <img src = "budgetlogo.png"> </img>
 <h2>This Month...</h2>
 <a href="">  + Add New Transactions </a>
 <!-- <button class = ""> Add New Transactions <button> -->
@@ -49,8 +50,8 @@
 <!-- <button class="w3-button w3-green" onclick="move()">Click Me</button> -->
 <script>
 function move(target,id) { // this needs to take in a percentage and an id
-  var elem = document.querySelector(id);
-  var width = 20;
+  var elem = document.getElementById(id);
+  var width = 0;
   var id = setInterval(frame, 10);
   function frame() {
     if (width >= target) {
@@ -85,18 +86,36 @@ function sendPost(route, d, cb) {
     if (cb) cb(data);
   });
 }
-// var total = sendGet("/total",function () {});
-// console.log(total);
-// var food = sendGet("/food",function () {});
-// console.log(food);
-// var rent = sendGet("/rent",function () {});
-// console.log(rent);
-// var entertainment = sendGet("/entertainment",function () {});
-// console.log(entertainment);
-move(50,"w3-container w3-green w3-center");
-move(20, "w3-container w3-green w3-center");
-move(20,"w3-container w3-green w3-center");
-move(10,"w3-container w3-green w3-center");
+var total = sendGet("/total",function (data) {});
+//console.log(total);
+var one = parseInt(total);
+//console.log(one);
+var food = sendGet("/food",function (data) {});
+var two =parseInt(food);
+
+var rent = sendGet("/rent",function (data) {});
+var three = parseInt(rent);
+
+var entertainment = sendGet("/entertainment",function (data) {});
+var four = parseInt(entertainment);
+
+var Budget = sendGet("/totalBudget",function (data) {});
+var bud = parseInt(Budget);
+one = (one.toPrecision(2)) / (bud.toPrecision(2));
+one = one * 100;
+two = (two.toPrecision(2)) / (bud.toPrecision(2));
+two = two * 100;
+
+three = (three.toPrecision(2)) / (bud.toPrecision(2));
+three = three * 100;
+four = (three.toPrecision(2)) / (bud.toPrecision(2));
+four = four* 100;
+//console.log(one);
+move(50,"myBar1");
+move(20, "myBar2");
+move(30,"myBar3");
+move(40,"myBar4");
+
 </script>
 </body>
 </html>

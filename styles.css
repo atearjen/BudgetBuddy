@@ -15,6 +15,13 @@ html {
   position: center;
 }
 
+img {
+
+  width: 400px;
+  length: 300px;
+  object-position: center;
+}
+
 /* box background */
 
 /* position: absolute;

@@ -27,31 +27,38 @@ def formData():
 #leftover total
 @app.route('/total', methods=['GET'])
 def leftTot():
-	return test.getBudgetTotal()-test.totalSpent(),200
+
+    myFloat = test.getBudgetTotal()-test.totalSpent()
+    return str(myFloat), 200
 
 #leftover food
 @app.route('/food', methods=['GET'])
 def leftFood():
-	spentFood=test.subMoney()
-
-	return (((0.3)*test.getBudgetTotal())-spentFood[1]),200
+    spentFood=test.subMoney()
+    myFloat = ((0.3)*test.getBudgetTotal())-spentFood[1]
+    return str(myFloat), 200
 
 
 #leftover rnt
 @app.route('/rent', methods=['GET'])
 def leftRent():
-	spentRent=test.subMoney()
+    spentRent=test.subMoney()
 
-	return (((0.4)*test.getBudgetTotal())-spentRent[2]),200
+    myFloat = 0.4 * test.getBudgetTotal() - spentRent[2]
+    return str(myFloat), 200
 
 #leftover entertainment
 @app.route('/entertainment', methods=['GET'])
 def leftEnter():
-	spentEnter=test.subMoney()
+    spentEnter=test.subMoney()
+    myFloat = ((0.3)*test.getBudgetTotal())-spentEnter[0]
+    return str(myFloat), 200
 
-	return (((0.3)*test.getBudgetTotal())-spentEnter[0]),200
-
-
+@app.route('/totalBudget', methods=['GET'])
+def totBud():
+    myFloat=test.getBudgetTotal()
+    return str(myFloat), 200
+#--------------------------------------------------------------------
 #from bmonth import bmonth
 
 
