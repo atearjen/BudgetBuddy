@@ -7,6 +7,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -47,7 +49,7 @@
 <!-- <button class="w3-button w3-green" onclick="move()">Click Me</button> -->
 <script>
 function move(target,id) { // this needs to take in a percentage and an id
-  var elem = document.getElementById(id);
+  var elem = document.querySelector(id);
   var width = 20;
   var id = setInterval(frame, 10);
   function frame() {
@@ -83,15 +85,18 @@ function sendPost(route, d, cb) {
     if (cb) cb(data);
   });
 }
-var total = $.get("/total",function () {};
-var food = $.get("/food",function () {};
-var rent = $.get("/rent",function () {};
-var entertainment = $.get("/entertainment",function () {};
-move(total,"myBar1");
-move(food, "myBar2");
-move(rent,"myBar3");
-move(entertainment,"myBar4");
+// var total = sendGet("/total",function () {});
+// console.log(total);
+// var food = sendGet("/food",function () {});
+// console.log(food);
+// var rent = sendGet("/rent",function () {});
+// console.log(rent);
+// var entertainment = sendGet("/entertainment",function () {});
+// console.log(entertainment);
+move(50,"w3-container w3-green w3-center");
+move(20, "w3-container w3-green w3-center");
+move(20,"w3-container w3-green w3-center");
+move(10,"w3-container w3-green w3-center");
 </script>
-
 </body>
 </html>

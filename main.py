@@ -1,4 +1,5 @@
 from bmonth import bmonth
+from bmonth import *
 from flask import Flask, render_template, request
 from flask_cors import CORS
 
@@ -6,6 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 test= bmonth()
+
 
 @app.route('/save', methods=['POST'])
 def formData():
@@ -30,24 +32,24 @@ def leftTot():
 #leftover food
 @app.route('/food', methods=['GET'])
 def leftFood():
-	spentFood=subMoney()
+	spentFood=test.subMoney()
 
-	return ((0.3)*test.getBudgetTotal())-spentfood[1],200
+	return (((0.3)*test.getBudgetTotal())-spentFood[1]),200
 
 
 #leftover rnt
 @app.route('/rent', methods=['GET'])
 def leftRent():
-	spentRent=subMoney()
+	spentRent=test.subMoney()
 
-	return ((0.3)*test.getBudgetTotal())-spentfood[2],200
+	return (((0.4)*test.getBudgetTotal())-spentRent[2]),200
 
-#leftover food
+#leftover entertainment
 @app.route('/entertainment', methods=['GET'])
 def leftEnter():
-	spentEnter=subMoney()
+	spentEnter=test.subMoney()
 
-	return ((0.3)*test.getBudgetTotal())-spentfood[0],200
+	return (((0.3)*test.getBudgetTotal())-spentEnter[0]),200
 
 
 #from bmonth import bmonth

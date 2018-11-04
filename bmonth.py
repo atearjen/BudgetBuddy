@@ -4,10 +4,6 @@ import csv
 from paypalsdk import *
 
 class bmonth():
-	
-	def test(self):
-		print('we made it')
-
 
 	def saveVar(self, Smonth, Sday, Syear, Emonth, Eday, Eyear, budget, fullName):
 		with open('data.csv', mode='w') as data:
@@ -19,7 +15,7 @@ class bmonth():
 		data=[]
 
 		with open("data.csv") as csvfile:
-   			reader = csv.reader(csvfile, quoting=csv.QUOTE_NONNUMERIC)
+   			reader = csv.reader(csvfile, quoting=csv.QUOTE_ALL)
 			for row in reader:
 				data.append(row)
 
@@ -47,7 +43,7 @@ class bmonth():
 		data=[]
 
 		with open("data.csv") as csvfile:
-   			reader = csv.reader(csvfile, quoting=csv.QUOTE_NONNUMERIC)
+   			reader = csv.reader(csvfile, quoting=csv.QUOTE_ALL)
 			for row in reader:
 				data.append(row)
 
@@ -69,7 +65,7 @@ class bmonth():
 		data=[]
 
 		with open("data.csv") as csvfile:
-   			reader = csv.reader(csvfile, quoting=csv.QUOTE_NONNUMERIC)
+   			reader = csv.reader(csvfile, quoting=csv.QUOTE_ALL)
 			for row in reader:
 				data.append(row)
 
