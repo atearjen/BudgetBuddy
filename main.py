@@ -6,6 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 test= bmonth()
+
 @app.route('/save', methods=['POST'])
 def formData():
     data= request.form
@@ -21,7 +22,32 @@ def formData():
 
     return '',200
 
+#leftover total
+@app.route('/total', methods=['GET'])
+def leftTot():
+	return test.getBudgetTotal()-test.totalSpent(),200
 
+#leftover food
+@app.route('/food', methods=['GET'])
+def leftFood():
+	spentFood=subMoney()
+
+	return ((0.3)*test.getBudgetTotal())-spentfood[1],200
+
+
+#leftover rnt
+@app.route('/rent', methods=['GET'])
+def leftRent():
+	spentRent=subMoney()
+
+	return ((0.3)*test.getBudgetTotal())-spentfood[2],200
+
+#leftover food
+@app.route('/entertainment', methods=['GET'])
+def leftEnter():
+	spentEnter=subMoney()
+
+	return ((0.3)*test.getBudgetTotal())-spentfood[0],200
 
 
 #from bmonth import bmonth
