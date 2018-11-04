@@ -36,6 +36,9 @@ $form.on('submit', function(event) {
   sendPost("/save",$form.serializeArray(),function () {
     console.log("got here");
   });
+  document.getElementById("button").onclick = function () {
+        location.href = "output.html";
+    };
   // $.get("/item",function (data) {
   //   console.log(data);
   // })
